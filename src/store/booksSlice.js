@@ -24,6 +24,7 @@ export const booksSlice = createSlice({
       state.books = action.payload
       state.getBooks.success = true
       state.getBooks.loading = false
+      console.log(action)
     }),
     builder.addCase(getBooks.pending, (state, action) => {
       state.getBooks.loading = true
