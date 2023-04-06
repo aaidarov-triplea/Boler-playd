@@ -1,11 +1,26 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, NavLink} from "react-router-dom"
+import styled from "styled-components"
 
+const Nav = styled.nav`
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+    & .active {
+        color: red;
+    }
+
+`
 export const Layout = () => {
 
     return (
         <>
         <div>
-        Layout anywhere
+            <Nav>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+            </Nav>
+            
         <Outlet/>
          </div>  
          </> 
